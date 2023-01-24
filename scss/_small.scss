@@ -21,7 +21,7 @@ body {
 }
 
 #headerWrapper {
-  background-color: #abc;
+  background-color: #B8D9A9;
   color: $secondaryColor;
 }
 
@@ -38,7 +38,7 @@ header {
 }
 
 #navWrapper {
-  background-color: bisque;
+  background-color: #264022;
 }
 
 nav {
@@ -52,7 +52,13 @@ nav {
     }
   }
   li.active {
-    background-color: aqua;
+    background-color: #f2b705;
+    a {color: #2f3133;
+        &:hover {
+            color: white;
+          }
+    }
+
   }
   a {
     display: block;
@@ -61,14 +67,14 @@ nav {
     text-align: center;
     text-decoration: none;
     &:hover {
-      color: #123;
+      color: #f2b705;
     }
   }
 }
 
 // begin the footer //
 #footerWrapper {
-    background-color: cornsilk;
+    background-color: #B8D9A9;
 }
 
 footer {
