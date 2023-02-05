@@ -25,17 +25,27 @@ body {
   color: $secondaryColor;
 }
 
+ //HEADER//
+
 header {
-  display: flex;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: 130px auto;
   padding: 1rem $gutter;
   gap: 8px;
   h1 {
     margin: 0;
     font-size: 1.2rem;
+    font-weight: $boldWeight;
+  }
+  h2 {
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 1rem;
     font-weight: $normalWeight;
   }
 }
+
+//NAV//
 
 #navWrapper {
   background-color: #264022;
@@ -70,6 +80,15 @@ nav {
       color: #f2b705;
     }
   }
+}
+
+// MAIN //
+main {
+  min-height: 10rem;
+}
+
+div.fruitGallery {
+  display: flex;
 }
 
 // begin the footer //
