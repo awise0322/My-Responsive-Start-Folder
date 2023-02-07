@@ -1,3 +1,7 @@
+// BODY STARTS HERE //
+
+// HEADER STARTS HERE //
+
 header {
     padding: 2rem $gutter;
     h1{
@@ -7,3 +11,57 @@ header {
         font-size: 1.75rem;
     }
 }
+
+// NAVIGATION STARTS HERE //
+
+#navWrapper {
+    background-color: $navColor;
+  }
+  
+  nav ul li a:hover {
+    background-color: lighten($navColor, 10%);
+  } 
+  
+  nav {
+    ul {
+      background-color: darken($navColor, 5%);
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      li {
+        flex: 1;
+      }
+    }
+  
+    li.active {
+      background-color: lighten($navColorActive, 10%);
+      a {color: #2f3133;
+          &:hover {
+              color: white;
+            }
+      }
+  
+    }
+    a {
+      display: block;
+      padding: 0.75rem;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      text-transform: none;
+      &:hover {
+        color: $navColorActive;
+      }
+    }
+  }
+
+// MAIN STARTS HERE //
+
+div.fruitGallery figure {
+flex-basis: 29%;
+}
+
+
+
+// FOOTER STARTS HERE //

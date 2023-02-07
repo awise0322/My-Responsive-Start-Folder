@@ -21,7 +21,7 @@ body {
 }
 
 #headerWrapper {
-  background-color: #B8D9A9;
+  background-color: $menuColor;
   color: $secondaryColor;
 }
 
@@ -33,8 +33,8 @@ header {
   padding: 1rem $gutter;
   gap: 8px;
   h1 {
-    margin: 0;
-    font-size: 1.2rem;
+    margin: -.25rem;
+    font-size: 2.2rem;
     font-weight: $boldWeight;
   }
   h2 {
@@ -47,39 +47,38 @@ header {
 
 //NAV//
 
-#navWrapper {
-  background-color: #264022;
+nav {
+  background-color: $navColor;
+}
+nav ul li a:hover {
+  background-color: lighten($navColor, 10%);
+} 
+
+nav ul {
+  margin: 0;
+  padding: 0 2vw;
+  list-style-type: none;
 }
 
-nav {
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    li {
-      flex: 1;
-    }
-  }
-  li.active {
-    background-color: #f2b705;
-    a {color: #2f3133;
-        &:hover {
-            color: white;
-          }
-    }
+nav a:hover {
+  color: $navColorActive;
+  text-decoration: underline 3px darken($navColorActive, 10%);
+}
 
-  }
-  a {
-    display: block;
-    padding: 0.75rem;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    &:hover {
-      color: #f2b705;
-    }
-  }
+nav a {
+  display: block;
+  padding: .8rem;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: solid 1px #aaa;
+  color: white;
+}
+nav .active a {
+  background-color: lighten($navColorActive, 10%);
+  color: $navColor;
+  background-image:linear-gradient(to bottom, $navColorActive, #D39F1C );
 }
 
 // MAIN //
@@ -89,6 +88,16 @@ main {
 
 div.fruitGallery {
   display: flex;
+  flex-wrap: wrap;
+}
+
+div.fruitGallery figure {
+  flex-basis: 96%;
+  margin: 1rem 2%;
+}
+
+div.fruitGallery figure img {
+  width: 100%;
 }
 
 // begin the footer //

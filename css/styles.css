@@ -344,8 +344,8 @@ header {
   gap: 8px;
 }
 header h1 {
-  margin: 0;
-  font-size: 1.2rem;
+  margin: -0.25rem;
+  font-size: 2.2rem;
   font-weight: 700;
 }
 header h2 {
@@ -355,37 +355,41 @@ header h2 {
   font-weight: 400;
 }
 
-#navWrapper {
+nav {
   background-color: #264022;
 }
 
+nav ul li a:hover {
+  background-color: #3a6134;
+}
+
 nav ul {
-  list-style-type: none;
-  padding: 0;
   margin: 0;
-  display: flex;
+  padding: 0 2vw;
+  list-style-type: none;
 }
-nav ul li {
-  flex: 1;
-}
-nav li.active {
-  background-color: #f2b705;
-}
-nav li.active a {
-  color: #2f3133;
-}
-nav li.active a:hover {
-  color: white;
-}
-nav a {
-  display: block;
-  padding: 0.75rem;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
+
 nav a:hover {
   color: #f2b705;
+  -webkit-text-decoration: underline 3px #c09104;
+          text-decoration: underline 3px #c09104;
+}
+
+nav a {
+  display: block;
+  padding: 0.8rem;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: solid 1px #aaa;
+  color: white;
+}
+
+nav .active a {
+  background-color: #fbc82f;
+  color: #264022;
+  background-image: linear-gradient(to bottom, #f2b705, #D39F1C);
 }
 
 main {
@@ -394,6 +398,16 @@ main {
 
 div.fruitGallery {
   display: flex;
+  flex-wrap: wrap;
+}
+
+div.fruitGallery figure {
+  flex-basis: 96%;
+  margin: 1rem 2%;
+}
+
+div.fruitGallery figure img {
+  width: 100%;
 }
 
 #footerWrapper {
@@ -420,10 +434,52 @@ footer p {
   header h1 {
     font-size: 1.75rem;
   }
+  #navWrapper {
+    background-color: #264022;
+  }
+  nav ul li a:hover {
+    background-color: #3a6134;
+  }
+  nav ul {
+    background-color: #1c2f19;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  nav ul li {
+    flex: 1;
+  }
+  nav li.active {
+    background-color: #fbc82f;
+  }
+  nav li.active a {
+    color: #2f3133;
+  }
+  nav li.active a:hover {
+    color: white;
+  }
+  nav a {
+    display: block;
+    padding: 0.75rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+  }
+  nav a:hover {
+    color: #f2b705;
+  }
+  div.fruitGallery figure {
+    flex-basis: 29%;
+  }
 }
 @media only screen and (min-width: 60rem) {
   header, nav, main, footer {
     max-width: 60rem;
     margin: auto;
+  }
+  div.fruitGallery figure {
+    flex-basis: 21%;
   }
 }
