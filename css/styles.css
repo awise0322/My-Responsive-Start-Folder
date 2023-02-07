@@ -370,9 +370,9 @@ nav ul {
 }
 
 nav a:hover {
-  color: #f2b705;
-  -webkit-text-decoration: underline 3px #c09104;
-          text-decoration: underline 3px #c09104;
+  color: white;
+  -webkit-text-decoration: underline 3px white;
+          text-decoration: underline 3px white;
 }
 
 nav a {
@@ -468,7 +468,8 @@ footer p {
     text-transform: none;
   }
   nav a:hover {
-    color: #f2b705;
+    color: white;
+    text-decoration: none;
   }
   div.fruitGallery figure {
     flex-basis: 29%;

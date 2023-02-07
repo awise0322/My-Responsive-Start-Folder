@@ -51,7 +51,8 @@ header {
       text-decoration: none;
       text-transform: none;
       &:hover {
-        color: $navColorActive;
+        color: white;
+        text-decoration: none;
       }
     }
   }
